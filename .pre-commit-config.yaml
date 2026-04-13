@@ -7,7 +7,7 @@ repos:
       - id: debug-statements
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.2 # also update pyproject.toml
+    rev: v0.15.10 # also update pyproject.toml
     hooks:
       # Run the linter.
       - id: ruff-check
@@ -17,7 +17,7 @@ repos:
         args: [--config, "pyproject.toml"]
 
   - repo: https://github.com/pycalendar/ai-prompt-auto-commit
-    rev: v0.0.3
+    rev: v0.0.5
     hooks:
       - id: prepare-ai-repository
       - id: unstage-ai-prompts
