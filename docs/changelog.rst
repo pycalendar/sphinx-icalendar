@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.1.1 (2026-04-13)
+------------------
+
+- Remove dependency restriction for icalendar.
+- Document how to contribute.
+
 0.1.0 (2026-02-28)
 ------------------
 
