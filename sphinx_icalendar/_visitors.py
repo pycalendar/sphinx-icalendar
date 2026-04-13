@@ -94,8 +94,11 @@ def visit_calendar_html(self: HTML5Translator, node: calendar_block) -> None:
     table_html = _render_table(occurrences, cal)
     ics = source if is_ical else cal.to_ical().decode()
     jcal = pretty_jcal(cal.to_jcal()) if is_ical else source
-    ics_highlighted = self.highlighter.highlight_block(ics, "ics")
-    jcal_highlighted = self.highlighter.highlight_block(jcal, "json")
+    opts: dict = dict(node.get("highlight_args", {}))
+    if node.get("linenos"):
+        opts["linenos"] = True
+    ics_highlighted = self.highlighter.highlight_block(ics, "ics", opts=opts)
+    jcal_highlighted = self.highlighter.highlight_block(jcal, "json", opts=opts)
 
     self.body.append(
         f'<div class="sd-tab-set">'

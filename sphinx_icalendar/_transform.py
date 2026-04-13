@@ -16,7 +16,11 @@ class CalendarTransform(SphinxTransform):
             if node.get("language") != "calendar":
                 continue
             source = node.astext()
-            new_node = calendar_block(ical_source=source)
+            new_node = calendar_block(
+                ical_source=source,
+                linenos=node.get("linenos", False),
+                highlight_args=node.get("highlight_args", {}),
+            )
             new_node.source = node.source
             new_node.line = node.line
             node.replace_self(new_node)

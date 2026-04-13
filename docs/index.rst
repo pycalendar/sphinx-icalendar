@@ -8,7 +8,7 @@ A minimal Sphinx extension that renders ``.. code-block:: calendar`` directives 
    :caption: Contents
 
    install
-   usage
+   usage/index
    contributing
 
 .. toctree::

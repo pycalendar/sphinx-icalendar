@@ -72,6 +72,56 @@ def test_calendar_block_stores_ical_source():
     assert node["ical_source"] == ICS_SOURCE
 
 
+def test_linenos_forwarded_to_calendar_block():
+    document = _make_document()
+    block = nodes.literal_block(ICS_SOURCE, ICS_SOURCE)
+    block["language"] = "calendar"
+    block["linenos"] = True
+    document += block
+
+    _apply_transform(document)
+
+    [node] = document.findall(calendar_block)
+    assert node["linenos"] is True
+
+
+def test_emphasize_lines_forwarded_to_calendar_block():
+    document = _make_document()
+    block = nodes.literal_block(ICS_SOURCE, ICS_SOURCE)
+    block["language"] = "calendar"
+    block["highlight_args"] = {"hl_lines": [1, 3]}
+    document += block
+
+    _apply_transform(document)
+
+    [node] = document.findall(calendar_block)
+    assert node["highlight_args"] == {"hl_lines": [1, 3]}
+
+
+def test_default_linenos_is_false():
+    document = _make_document()
+    block = nodes.literal_block(ICS_SOURCE, ICS_SOURCE)
+    block["language"] = "calendar"
+    document += block
+
+    _apply_transform(document)
+
+    [node] = document.findall(calendar_block)
+    assert not node["linenos"]
+
+
+def test_default_highlight_args_is_empty():
+    document = _make_document()
+    block = nodes.literal_block(ICS_SOURCE, ICS_SOURCE)
+    block["language"] = "calendar"
+    document += block
+
+    _apply_transform(document)
+
+    [node] = document.findall(calendar_block)
+    assert node["highlight_args"] == {}
+
+
 def test_multiple_calendar_blocks_all_replaced():
     document = _make_document()
     for _ in range(3):
