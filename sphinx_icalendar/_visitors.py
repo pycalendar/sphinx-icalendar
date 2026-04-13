@@ -87,6 +87,7 @@ def pretty_jcal(jcal: list, indent: int = 0) -> str:
 def visit_calendar_html(self: HTML5Translator, node: calendar_block) -> None:
     source = node["ical_source"]
     is_ical = source.strip()[:1].upper() == "B"
+    is_jcal = not is_ical
     cal = Calendar.from_ical(source) if is_ical else Calendar.from_jcal(source)
     occurrences = recurring_ical_events.of(cal).all()
 
@@ -94,11 +95,14 @@ def visit_calendar_html(self: HTML5Translator, node: calendar_block) -> None:
     table_html = _render_table(occurrences, cal)
     ics = source if is_ical else cal.to_ical().decode()
     jcal = pretty_jcal(cal.to_jcal()) if is_ical else source
-    opts: dict = dict(node.get("highlight_args", {}))
-    if node.get("linenos"):
-        opts["linenos"] = True
-    ics_highlighted = self.highlighter.highlight_block(ics, "ics", opts=opts)
-    jcal_highlighted = self.highlighter.highlight_block(jcal, "json", opts=opts)
+    linenos = node.get("linenos", False)
+    highlight_args = dict(node.get("highlight_args", {}))
+    ics_highlighted = self.highlighter.highlight_block(
+        ics, "ics", linenos=linenos, **(highlight_args if is_ical else {})
+    )
+    jcal_highlighted = self.highlighter.highlight_block(
+        jcal, "json", linenos=linenos, **(highlight_args if is_jcal else {})
+    )
 
     self.body.append(
         f'<div class="sd-tab-set">'

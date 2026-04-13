@@ -105,3 +105,42 @@ The original JSON formatting is preserved.
       ]
     ]
 
+Options
+-------
+
+A ``calendar`` directive support the following options:
+
+- ``:emphasize-lines:`` - A comma-separated list of line numbers to emphasize.
+    This only applies to the source code blocks with ``jcal`` or ``ics`` content.
+- ``:linenos:`` - If set, adds line numbers.
+
+
+Below, you can find an ``ics`` calendar that highlights a single event.
+
+.. code-block:: rst
+
+    .. code-block:: calendar
+        :linenos:
+        :emphasize-lines: 2, 7
+
+        BEGIN:VCALENDAR
+        BEGIN:VEVENT
+        SUMMARY:New Year's Day
+        DTSTART:20220101
+        DTEND:20220101
+        UID:636a0cc1dbd5a1667894465@icalendar
+        END:VEVENT
+        END:VCALENDAR 
+
+.. code-block:: calendar
+    :linenos:
+    :emphasize-lines: 2, 7
+
+    BEGIN:VCALENDAR
+    BEGIN:VEVENT
+    SUMMARY:New Year's Day
+    DTSTART:20220101
+    DTEND:20220101
+    UID:636a0cc1dbd5a1667894465@icalendar
+    END:VEVENT
+    END:VCALENDAR
