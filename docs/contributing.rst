@@ -9,6 +9,7 @@ Prerequisites
 - Python 3.10 or later
 - Git
 - ``make``
+- `pre-commit <https://pre-commit.com/#install>`_
 
 Getting started
 ---------------
@@ -30,6 +31,12 @@ dependencies in editable mode:
 This runs ``python3 -m venv .venv`` and then ``pip install -e ".[dev]"``,
 which installs ``pytest``, ``sphinx``, and ``sphinx-autobuild`` alongside the
 extension itself.
+
+Install the pre-commit hooks so they run automatically on every commit:
+
+.. code-block:: bash
+
+    pre-commit install
 
 Building the docs
 -----------------
