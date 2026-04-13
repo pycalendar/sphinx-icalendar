@@ -85,5 +85,6 @@ To create a new release, run:
 
 .. code-block:: bash
 
+    git checkout main
     git tag v0.1.1
     git push origin v0.1.1
