@@ -41,11 +41,24 @@ Changelog = "https://sphinx-icalendar.readthedocs.io/en/latest/changelog.html"
 Funding = "https://github.com/sponsors/niccokunzmann"
 
 [project.optional-dependencies]
-dev = ["pytest", "sphinx", "sphinx-autobuild"]
+dev = [
+    "pytest",
+    "pydata-sphinx-theme>=0.14.4",
+    "sphinx>=7",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx-design>=0.5.0",
+    "sphinx-autobuild>=2021.3.14",
+    "sphinx-issues>=5.0.1",
+    "sphinx-llms-txt>=0.7.1",
+]
 
 [project.entry-points."pygments.lexers"]
 ics = "sphinx_icalendar._lexer:ICalendarLexer"
 jcal = "sphinx_icalendar._lexer:JCalLexer"
+
+[tool.hatch.version.raw-options]
+# see https://github.com/ofek/hatch-vcs/issues/43#issuecomment-1553065222
+local_scheme = "no-local-version"
 
 [tool.hatch.version]
 source = "vcs"

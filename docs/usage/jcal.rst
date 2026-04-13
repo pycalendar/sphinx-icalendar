@@ -1,5 +1,5 @@
-jCal syntax highlighting
-========================
+jCalendar syntax highlighting
+=============================
 
 The extension also registers ``jcal`` (and ``jcalendar``) as language aliases that apply JSON highlighting to raw jCal snippets without triggering the calendar rendering:
 
@@ -46,17 +46,6 @@ other ``.. code-block::`` language:
     .. code-block:: jcal
        :linenos:
        :emphasize-lines: 5, 6
-
-        ["vcalendar",
-          [["version", {}, "text", "2.0"]],
-          [["vevent",
-            [
-              ["summary",  {}, "text",      "Quarterly review"],
-              ["dtstart",  {}, "date-time", "2026-04-01T09:00:00Z"],
-              ["dtend",    {}, "date-time", "2026-04-01T10:00:00Z"]
-            ], []
-          ]]
-        ]
 
 .. code-block:: jcal
    :linenos:

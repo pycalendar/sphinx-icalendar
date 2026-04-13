@@ -81,6 +81,8 @@ Remove the virtual environment as well:
 New release
 -----------
 
+Before the release, check the documentation and that it renders properly.
+
 To create a new release, run:
 
 .. code-block:: bash
@@ -88,3 +90,14 @@ To create a new release, run:
     git checkout main
     git tag v0.1.1
     git push origin v0.1.1
+
+Notes on documentation
+----------------------
+
+- Use "iCalendar" when describing a file format that follows that standard.
+- Use "jCal" when describing a file format that follows that standard.
+- Use ".ics" or ".ifb" when describing a file's extension. See :rfc:`5545#section-8.1`.
+- Don't use "ICS" anywhere, including the tabbed interface. It's not used as an acronym in RFC 5545. Use "iCalendar" instead.
+
+.. seealso::
+    :issue:`3`

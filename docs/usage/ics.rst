@@ -1,7 +1,7 @@
-ICS syntax highlighting
-=======================
+iCalendar syntax highlighting
+=============================
 
-The extension also registers an ``ics`` (and ``icalendar``) language alias for Pygments so you can highlight raw ICS snippets in ordinary code blocks without triggering the calendar rendering:
+The extension also registers an ``ics`` (and ``icalendar``) language alias for Pygments so you can highlight raw iCalendar snippets in ordinary code blocks without triggering the calendar rendering:
 
 .. code-block:: rst
 
@@ -30,7 +30,7 @@ The result is a static, highlighted code block:
 Options
 -------
 
-``ics`` supports the ``linenos`` and ``emphasize-lines`` options, just like any
+iCalendar supports the ``linenos`` and ``emphasize-lines`` options, just like any
 other ``.. code-block::`` language:
 
 .. code-block:: rst

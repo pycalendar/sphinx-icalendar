@@ -112,7 +112,7 @@ def visit_calendar_html(self: HTML5Translator, node: calendar_block) -> None:
         f'<div class="sd-tab-content docutils">{table_html}</div>'
         # rendered ics
         f'<input id="cal-{tid}-input--2" name="cal-{tid}" type="radio">'
-        f'<label for="cal-{tid}-input--2">ICS</label>'
+        f'<label for="cal-{tid}-input--2">iCalendar</label>'
         f'<div class="sd-tab-content docutils">{ics_highlighted}</div>'
         # rendered jcal
         f'<input id="cal-{tid}-input--3" name="cal-{tid}" type="radio">'

@@ -22,8 +22,8 @@ The extension detects the format automatically.
         END:VEVENT
         END:VCALENDAR
 
-Below, we use a different ICS source to show a calendar with a name and description.
-The original ICS formatting is preserved.
+Below, we use a different iCalendar source to show a calendar with a name and description.
+The original iCalendar formatting is preserved.
 
 
 .. code-block:: calendar
@@ -111,11 +111,11 @@ Options
 A ``calendar`` directive support the following options:
 
 - ``:emphasize-lines:`` - A comma-separated list of line numbers to emphasize.
-    This only applies to the source code blocks with ``jcal`` or ``ics`` content.
-- ``:linenos:`` - If set, adds line numbers.
+  This only applies to the source code blocks, not the converted ones.
+- ``:linenos:`` - If set, adds line numbers to all code blocks.
 
 
-Below, you can find an ``ics`` calendar that highlights a single event.
+Below, you can find an iCalendar that highlights a single event.
 
 .. code-block:: rst
 
