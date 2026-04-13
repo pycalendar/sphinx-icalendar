@@ -20,7 +20,7 @@ venv: $(VENV)/bin/activate
 
 # ── docs ───────────────────────────────────────────────────────────────────
 
-.PHONY: html livehtml clean help clean-python clean-all
+.PHONY: html livehtml clean help clean-python clean-all test
 
 html: $(VENV)/bin/activate
 	$(SPHINXBUILD) -M html $(SOURCEDIR) $(BUILDDIR) $(SPHINXOPTS)
@@ -38,3 +38,6 @@ clean-all: clean clean-python
 
 help: $(VENV)/bin/activate
 	$(SPHINXBUILD) -M help $(SOURCEDIR) $(BUILDDIR) $(SPHINXOPTS)
+
+test: $(VENV)/bin/activate
+	pytest

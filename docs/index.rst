@@ -10,3 +10,4 @@ A minimal Sphinx extension that renders ``.. code-block:: calendar`` directives 
    install
    usage
    changelog
+   contributing
