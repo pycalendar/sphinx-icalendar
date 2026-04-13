@@ -77,3 +77,13 @@ Remove the virtual environment as well:
 .. code-block:: bash
 
     make clean-all
+
+New release
+-----------
+
+To create a new release, run:
+
+.. code-block:: bash
+
+    git tag v0.1.1
+    git push origin v0.1.1
