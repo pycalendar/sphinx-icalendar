@@ -1,6 +1,7 @@
 VENV       = .venv
 PYTHON     = $(VENV)/bin/python
 PIP        = $(VENV)/bin/pip
+PYTEST  = $(VENV)/bin/pytest
 SPHINXBUILD  = $(VENV)/bin/sphinx-build
 SPHINXAUTO   = $(VENV)/bin/sphinx-autobuild
 
@@ -22,10 +23,10 @@ venv: $(VENV)/bin/activate
 
 .PHONY: html livehtml clean help clean-python clean-all test
 
-html: $(VENV)/bin/activate
+html: venv
 	$(SPHINXBUILD) -M html $(SOURCEDIR) $(BUILDDIR) $(SPHINXOPTS)
 
-livehtml: $(VENV)/bin/activate
+livehtml: venv
 	$(SPHINXAUTO) $(SOURCEDIR) $(BUILDDIR)/html $(SPHINXOPTS)
 
 clean:
@@ -36,8 +37,8 @@ clean-python:
 
 clean-all: clean clean-python
 
-help: $(VENV)/bin/activate
+help: venv
 	$(SPHINXBUILD) -M help $(SOURCEDIR) $(BUILDDIR) $(SPHINXOPTS)
 
-test: $(VENV)/bin/activate
-	pytest
+test: venv
+	$(PYTEST)
