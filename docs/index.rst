@@ -9,5 +9,9 @@ A minimal Sphinx extension that renders ``.. code-block:: calendar`` directives 
 
    install
    usage
-   changelog
    contributing
+
+.. toctree::
+   :maxdepth: 1
+
+   changelog
