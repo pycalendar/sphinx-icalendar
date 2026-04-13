@@ -11,12 +11,12 @@ tabs with a rendered event table and the source specification.
 ----
 
 :Homepage: https://sphinx-icalendar.readthedocs.io/en/latest/
-:Issue Tracker: https://github.com/niccokunzmann/sphinx-icalendar-extension/issues
-:Code: https://github.com/niccokunzmann/sphinx-icalendar-extension
+:Issue Tracker: https://github.com/pycalendar/sphinx-icalendar/issues
+:Code: https://github.com/pycalendar/sphinx-icalendar
 :Dependencies: `icalendar <https://pypi.org/project/icalendar/>`_,
                `recurring-ical-events <https://pypi.org/project/recurring-ical-events/>`_,
                `sphinx-design <https://pypi.org/project/sphinx-design/>`_
-:License: `GPL-3.0-or-later <https://github.com/niccokunzmann/sphinx-icalendar-extension/blob/main/LICENSE>`_
+:License: `GPL-3.0-or-later <https://github.com/pycalendar/sphinx-icalendar/blob/main/LICENSE>`_
 
 ----
 
@@ -28,16 +28,16 @@ tabs with a rendered event table and the source specification.
     :target: https://pypi.org/project/sphinx-icalendar/
     :alt: Supported Python versions
 
-.. image:: https://img.shields.io/github/actions/workflow/status/niccokunzmann/sphinx-icalendar-extension/tests.yml?branch=main&label=main&logo=github
-    :target: https://github.com/niccokunzmann/sphinx-icalendar-extension/actions/workflows/tests.yml
+.. image:: https://img.shields.io/github/actions/workflow/status/pycalendar/sphinx-icalendar/tests.yml?branch=main&label=main&logo=github
+    :target: https://github.com/pycalendar/sphinx-icalendar/actions/workflows/tests.yml
     :alt: GitHub Actions build status
 
 .. image:: https://readthedocs.org/projects/sphinx-icalendar/badge/?version=latest
     :target: https://sphinx-icalendar.readthedocs.io/en/latest/
     :alt: Documentation status
 
-.. image:: https://img.shields.io/github/stars/niccokunzmann/sphinx-icalendar-extension?style=social
-    :target: https://github.com/niccokunzmann/sphinx-icalendar-extension
+.. image:: https://img.shields.io/github/stars/pycalendar/sphinx-icalendar?style=social
+    :target: https://github.com/pycalendar/sphinx-icalendar
     :alt: GitHub stars
 
 .. image:: https://img.shields.io/github/sponsors/niccokunzmann?label=Sponsor&logo=GitHub

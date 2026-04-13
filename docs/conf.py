@@ -12,6 +12,6 @@ html_theme = "alabaster"
 
 html_theme_options = {
     "description": "Render iCalendar events directly in your Sphinx docs.",
-    "github_user": "niccokunzmann",
-    "github_repo": "sphinx-icalendar-extension",
+    "github_user": "pycalendar",
+    "github_repo": "sphinx-icalendar",
 }

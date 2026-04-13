@@ -18,8 +18,8 @@ Clone the repository:
 
 .. code-block:: bash
 
-    git clone https://github.com/niccokunzmann/sphinx-icalendar-extension.git
-    cd sphinx-icalendar-extension
+    git clone https://github.com/pycalendar/sphinx-icalendar.git
+    cd sphinx-icalendar
 
 Create a virtual environment and install the package with its development
 dependencies in editable mode:
