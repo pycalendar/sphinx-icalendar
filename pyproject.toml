@@ -28,7 +28,7 @@ classifiers = [
 dependencies = [
     "sphinx>=5.0",  # also check install.rst
     "icalendar",
-    "recurring-ical-events>=3.8.1",
+    "recurring-ical-events",
     "sphinx-design>=0.5",
 ]
 
