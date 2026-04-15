@@ -75,3 +75,8 @@ html_js_files = [
     ("js/custom-icons.js", {"defer": "defer"}),
 ]
 pygments_style = "sphinx"
+
+# make title smaller
+# see https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_title
+html_title = f"{project} {release}"
+html_short_title = project
