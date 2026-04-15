@@ -10,6 +10,7 @@ Changelog
 ------------------
 
 - Use Pydata Sphinx theme
+- Document and add ``:linenos:`` and ``:emphasize-lines:`` options for code blocks.
 
 0.1.1 (2026-04-13)
 ------------------
