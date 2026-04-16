@@ -1,6 +1,8 @@
 Contributing
 ============
 
+Please report all issues on `GitHub <https://github.com/pycalendar/sphinx-icalendar/issues>`__.
+
 This page describes how to set up a local development environment.
 
 Prerequisites
