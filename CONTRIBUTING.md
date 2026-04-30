@@ -37,6 +37,7 @@ Contributors
 - All conversations should be addressed and resolved.
 - At least one approval from a maintainer or code owner.
 - Maintainers may override any or all of the requirements, but should add a comment explaining their reason for doing so.
+- If pull requests do not receive a review from another maintainer, after 7 days, the maintainer can merge it.
 
 ## Stale pull requests
 
