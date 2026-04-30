@@ -8,6 +8,7 @@ To get started with development,
 Maintainers are:
 
 - [Nicco Kunzmann](https://github.com/niccokunzmann)
+- [Steve Piercy](https://github.com/stevepiercy)
 
 They can:
 
